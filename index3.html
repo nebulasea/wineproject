@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Wine Recommendations</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+</head>
+
+<body>
+  <nav class="red darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo white-text">WineBuddy</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href = "index2.html">Profile</a></li>
+        <li><a href = "index3.html">Wine Recommendations</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href = "index2.html">Profile</a></li>
+        <li><a href = "index3.html">Wine Recommendations</a></li>
+       
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i>Menu</i></a>
+
+    </div>
+  </nav>
+
+<br>
+<br>
+<br>
+    What kind of wine do you like? (Select all that apply)
+<br>
+<br>
+    <div>
+      Type
+<br>
+         <ul>
+           <li><input type="checkbox" value="Red Wine"> Red</li>
+           <li><input type="checkbox" value="White Wine"> White</li>
+           <li><input type="checkbox" value="Rosé Wine"> Ros&eacute;</li>
+           <li><input type="checkbox" value="Champagne & Sparkling"> Sparkling</li>
+         </ul>
+
+
+    </div>
+<br>
+
+<!-- <div>
+Region
+<br>
+<ul> 
+<li><input type="checkbox" name="US"> US</li>
+<li><input type="checkbox" name="Europe"> Europe</li>
+<li><input type="checkbox" name="South America"> South America</li>
+<li><input type="checkbox" name="Australia/New Zealand"> Australia New Zealand</li>
+</ul>
+</div>
+<br>
+
+<div>
+Style
+<br>
+<ul>
+	<li><input type="checkbox" name="light"> Light</li>
+	<li><input type="checkbox" name="fruity"> Fruity</li>
+	<li><input type="checkbox" name="crisp"> Crisp</li>
+	<li><input type="checkbox" name="smooth"> Smooth</li>
+	<li><input type="checkbox" name="earthy/spicy"> Earthy/Spicy</li>
+	<li><input type="checkbox" name="bold"> Bold</li>
+	<li><input type="checkbox" name="rich/creamy"> Rich &amp; Creamy</li>
+</ul>
+</div>
+<br> -->
+<!-- <div>
+Level of Wine Knowledge:
+<ul>
+	<li><input type="checkbox" name="newb"> Newb: I'm new to wine and want to learn more!</li>
+	<li><input type="checkbox" name="enthusiast"> Enthusiast: I've tasted lots of wine and I know what I like.</li>
+	<li><input type="checkbox" name="sommelier"> Sommelier: Very experienced in wine and pairing.</li>
+</ul>
+</div>
+<br> -->
+<input id="submitWineButton" type="submit" name="submit" value="Submit">
+</form>
+
+
+
+
+<script src="assets/javascript/materialize.js"></script>
+<script src="assets/javascript/init.js"></script>
+	<script src="assets/javascript/app.js"></script>
+</body>
+</html>

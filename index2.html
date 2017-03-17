@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+      <title>Winebuddy Profile</title>
+<!--Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+</head>
+
+<body>
+<!--Navigation Bar-->
+  <nav class="red darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo white-text">WineBuddy</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href = "index2.html">Profile</a></li>
+          <li><a href = "index3.html">Wine Recommendations</a></li>
+        </ul>
+<!--Mobile Nav Bar-->
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href = "index2.html">Profile</a></li>
+        <li><a href = "index3.html">Wine Recommendations</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i>Menu</i></a>
+    </div>
+  </nav>
+<!--Photo/Header Container-->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+          <h2 class="header center white-text" id="shadowtext">Your Profile</h2>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/images/grapes.jpg" alt="grapes">
+    </div>
+  </div>
+
+<!--User Input Container-->
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <form class="col s12" id="userInfo" type="submit">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="userName" type="text" class="validate">
+                <label for="userName">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="userLocation" type="text" class="validate">
+                <label for="userLocation">Location</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="bio" type="text" class="validate">
+                <label for="bio">Short Bio</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+        <br><br>
+<!--Log in with Facebook Option-->        
+        <div class="row">
+          <div class="input-field col s12">       
+            <fb:login-button  class= "fbclass" size="xlarge" scope="public_profile,email" onlogin="checkLoginState();" autologoutlink="true">
+            </fb:login-button>
+            <button class ="btn btn-default" onclick="checkLoginState();">Log in with Facebook</button>
+            <br>
+            <div id="status"></div>
+          </div>  
+        </div>       
+      </div>
+    </div>
+  </div>
+<!--Footer Section-->
+  <footer class="page-footer red darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Our Company</h5>
+            <p class="grey-text text-lighten-4">We are a team of students working on this project like it's our full time job. We also just love wine.
+            </p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+            <i class="icon"> <a href="https://www.facebook.com">
+                <img src="assets/images/facebook.png"></a></i>
+            <i class="icon"> <a href="https://www.instagram.com">
+                <img src="assets/images/instagram.png"></a></i>
+            <i class="icon"><a href="https://www.twitter.com">
+                <img src="assets/images/twitter.png"></a></i>
+            <i class="icon"> <a href="https://plus.google.com"> 
+                <img src="assets/images/googleplus.png"></a></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p>&copy2017 Made by Keli Poole, Monica Jones, and Megha Iyer<a class="brown-text text-lighten-3"></a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="assets/javascript/materialize.js"></script>
+    <script src="assets/javascript/init.js"></script>
+  <script src="assets/javascript/fb.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</html>
