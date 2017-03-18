@@ -6,6 +6,9 @@ body{
   color: white;
 
 }
+.dropdown-container {
+  display: inline-block;
+}
 label{
   color: brown;
   font-size: 25px;
