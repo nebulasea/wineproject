@@ -1,40 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-	<title>Wine Recommendations</title>
-	<link rel="stylesheet" href="assets/css/reset.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+      <title>Winebuddy Wine Recommendations</title>
+<!--Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Roboto:400,500" rel="stylesheet">
+      <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
 </head>
 
 <body>
+<!--Navigation Bar-->
   <nav class="red darken-4" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo white-text">WineBuddy</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
-        <li><a href = "index2.html">Profile</a></li>
-        <li><a href = "index3.html">Wine Recommendations</a></li>
-      </ul>
-
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href = "index2.html">Profile</a></li>
+          <li><a href = "index3.html">Wine Recommendations</a></li>
+        </ul>
+<!--Mobile Nav Bar-->
       <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href = "index2.html">Profile</a></li>
         <li><a href = "index3.html">Wine Recommendations</a></li>
-       
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i>Menu</i></a>
-
     </div>
   </nav>
+<!--Photo/Header Container-->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+          <h1 class="header center white-text" id="shadowtext">Wine Recommendations</h1>
+            <p class= "center white-text" id="pinstruct">Select your favorite styles and get a list of wines to try!</p>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/images/dustylatour.jpg" alt="latour">
+    </div>
+  </div>
+<div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 left">
+          <form class="col s12" id="userInfo" type="submit">
+            <dl class="dropdown"> 
+  <dt>
+    <a>
+      Red      
+    </a>
+    </dt>
+  
+    <dd>
+            <ul>
+            <form action="#" class="select-red">
+                <li>
+                    <input type="checkbox" id="light_and_fruity" value="610" /><label for="light_and_fruity">Light &amp; Fruity</label></li>
+                <li>
+                    <input type="checkbox" id="smooth_and_supple" value="611" /><label for="smooth_and_supple">Smooth &amp; Supple</label></li>
+                <li>
+                    <input type="checkbox" id="big_and_bold" value=“613” /><label for="big_and_bold">Big &amp; Bold</label></li>
+                <li>
+                    <input type="checkbox" id="earthy_and_spicy" value="612" /><label for="earthy_and_spicy">Earthy &amp; Spicy</label></li>
+        </form>
+            </ul>
+    </dd>
+</dl>
+<br><br>
+<dl class="dropdown"> 
+  <dt>
+    <a>
+      White      
+    </a>
+    </dt>
+  
+    <dd>
+            <ul>
+            <form action="#" class="select-white">
+                <li>
+                    <input type="checkbox" id="light_and_crisp" value="614" /><label for="light_and_crisp">Light &amp; Crisp</label></li>
+                <li>
+                    <input type="checkbox" id="fruity_and_smooth" value="615" /><label for="fruity_and_smooth">Fruity &amp; Smooth</label></li>
+                <li>
+                    <input type="checkbox" id="rich_and_creamy" value="616" /><label for="rich_and_creamy">Rich &amp; Creamy</label></li>
+        </form>
+            </ul>
+    </dd>
+</dl>
+<br><br>
+<dl class="dropdown"> 
+  <dt>
+    <a>
+      Other      
+    </a>
+    </dt>
+  
+    <dd>
+            <ul>
+            <form action="#" class="select-other">
+                <li>
+                    <input type="checkbox" id="rose-wine" value="126" /><label for="rose-wine">Rose&acute;</label></li>
+                <li>
+                    <input type="checkbox" id="sparkling-wine" value="123" /><label for="parkling-wine">Sparkling</label></li>
+                <li>
+                    <input type="checkbox" id="dessert-wine" value="128" /><label for="dessert-wine">Dessert</label></li>
+        </form>
+            </ul>
+    </dd>
+</dl>
+<br>
+<input id="submitWineButton" type="submit" name="submit" value="Submit">
+</form>
+<br><br><br>
+<div class="row">
+  <div class= "col s12 center">
+    <div id="wine-list">
+      <ul class="brown-text" id="wine-list-results">
+      </ul>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
+<!-- 
 <br>
 <br>
 <br>
@@ -55,7 +150,7 @@
     </div>
 <br>
 
-<!-- <div>
+<div>
 Region
 <br>
 <ul> 
@@ -71,33 +166,62 @@ Region
 Style
 <br>
 <ul>
-	<li><input type="checkbox" name="light"> Light</li>
-	<li><input type="checkbox" name="fruity"> Fruity</li>
-	<li><input type="checkbox" name="crisp"> Crisp</li>
-	<li><input type="checkbox" name="smooth"> Smooth</li>
-	<li><input type="checkbox" name="earthy/spicy"> Earthy/Spicy</li>
-	<li><input type="checkbox" name="bold"> Bold</li>
-	<li><input type="checkbox" name="rich/creamy"> Rich &amp; Creamy</li>
+  <li><input type="checkbox" name="light"> Light</li>
+  <li><input type="checkbox" name="fruity"> Fruity</li>
+  <li><input type="checkbox" name="crisp"> Crisp</li>
+  <li><input type="checkbox" name="smooth"> Smooth</li>
+  <li><input type="checkbox" name="earthy/spicy"> Earthy/Spicy</li>
+  <li><input type="checkbox" name="bold"> Bold</li>
+  <li><input type="checkbox" name="rich/creamy"> Rich &amp; Creamy</li>
 </ul>
 </div>
-<br> -->
-<!-- <div>
+<br>
+ <div>
 Level of Wine Knowledge:
 <ul>
-	<li><input type="checkbox" name="newb"> Newb: I'm new to wine and want to learn more!</li>
-	<li><input type="checkbox" name="enthusiast"> Enthusiast: I've tasted lots of wine and I know what I like.</li>
-	<li><input type="checkbox" name="sommelier"> Sommelier: Very experienced in wine and pairing.</li>
+  <li><input type="checkbox" name="newb"> Newb: I'm new to wine and want to learn more!</li>
+  <li><input type="checkbox" name="enthusiast"> Enthusiast: I've tasted lots of wine and I know what I like.</li>
+  <li><input type="checkbox" name="sommelier"> Sommelier: Very experienced in wine and pairing.</li>
 </ul>
 </div>
 <br> -->
-<input id="submitWineButton" type="submit" name="submit" value="Submit">
-</form>
+<!-- <input id="submitWineButton" type="submit" name="submit" value="Submit">
+</form> -->
+
+  <footer class="page-footer red darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Our Company</h5>
+            <p class="grey-text text-lighten-4">We are a team of students working on this project like it's our full time job. We also just love wine.</p>
+            <h5 class="white-text">Contact Us</h5>
+              <address>
+              <a href= "mailto:winebuddysocial@gmail.com">winebuddysocial@gmail.com</a>
+              </address>
+        </div>
+        <div class="col l3 s12">
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+            <i class="icon"> <a href="https://www.facebook.com"><img src="assets/images/facebook.png"></a></i>
+            <i class="icon"> <a href="https://www.instagram.com"><img src="assets/images/instagram.png"></a></i>
+            <i class="icon"><a href="https://www.twitter.com"><img src="assets/images/twitter.png"></a></i>
+            <i class="icon"> <a href="https://plus.google.com"><img src="assets/images/googleplus.png"></a></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p>&copy2017 Made by Keli Poole, Monica Jones, and Megha Iyer<a class="brown-text text-lighten-3"></a></p>
+      </div>
+    </div>
+  </footer>
 
 
-
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="assets/javascript/materialize.js"></script>
-<script src="assets/javascript/init.js"></script>
-	<script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/init.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> 
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

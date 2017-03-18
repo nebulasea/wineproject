@@ -27,7 +27,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1931641400399556',
+    appId      : '1143513502426804',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page

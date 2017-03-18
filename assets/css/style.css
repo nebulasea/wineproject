@@ -6,6 +6,15 @@ body{
   color: white;
 
 }
+label{
+  color: brown;
+  font-size: 25px;
+}
+dt > a{
+  color: brown;
+  font-size: 30px;
+
+}
 #shadowtext{
   text-shadow: 5px 3px black;
 }
@@ -17,7 +26,9 @@ body{
   text-shadow: 2px 2px black;
   font-size: 2rem;
 }
-
+#pinstruct{
+  font-size: 1.55rem;
+}
 
 p {
   line-height: 2rem;
