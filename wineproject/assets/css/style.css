@@ -1,0 +1,72 @@
+
+body{
+  background-color: white;
+}
+.navbar.li{
+  color: white;
+
+}
+label{
+  color: brown;
+  font-size: 25px;
+}
+form{
+  color: brown;
+  font-size: 30px;
+   align-items: left;
+}
+#shadowtext{
+  text-shadow: 5px 3px black;
+}
+.icon{
+  display: inline;
+}
+#hemingway{
+  font-style: italic;
+  text-shadow: 2px 2px black;
+  font-size: 2rem;
+}
+#pinstruct{
+  font-size: 1.55rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
